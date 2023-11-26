@@ -1,8 +1,12 @@
 :root {
     --main-color: #044D80;
     --main-color-2: #1489DD;
+    --primary-color: #39364e;
+    --secondary-color: #696969;
+    --thirdly-color: white;
     --border-color: #1188dd26;
     --transition: 0.3s;
+    --main-padding: 50px;
 }
 
 /* Start Hero Section */
@@ -42,3 +46,103 @@
 }
 
 /* End Hero Section */
+
+/* Start What We Provide Section */
+
+#whatWeProvide {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    z-index: 2;
+}
+
+#whatWeProvide .box {
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 20px 10px;
+    height: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    cursor: pointer;
+}
+
+#whatWeProvide .box:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11), 0 8px 16px rgba(0, 0, 0, 0.11);
+    z-index: 2;
+    background-color: var(--main-color-2);
+}
+
+#whatWeProvide .box .image {
+    width: 64px;
+    aspect-ratio: 1/1;
+}
+
+#whatWeProvide .box span {
+    color: var(--primary-color);
+}
+
+#whatWeProvide .box:hover span {
+    color: white;
+}
+
+#whatWeProvide .box p {
+    color: var(--secondary-color);
+}
+
+#whatWeProvide .box:hover p {
+    color: white;
+}
+
+/* End What We Provide Section */
+
+/* Start whoWeAre Section */
+
+#whoWeAre {
+    background-color: #EEF7FD;
+    padding-bottom: var(--main-padding);
+    padding-top: 250px;
+    position: relative;
+    top: -200px;
+}
+
+#whoWeAre .box h2 {
+    color: var(--primary-color);
+}
+
+#whoWeAre .box strong {
+    color: var(--primary-color);
+}
+
+#whoWeAre .box p {
+    color: var(--secondary-color);
+}
+
+#whoWeAre .box button a {
+    color: var(--thirdly-color);
+}
+
+#whoWeAre .box .image {
+    position: relative;
+    max-height: 513px;
+    overflow: hidden;
+}
+
+#whoWeAre .box .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006b;
+    z-index: 2;
+}
+
+#whoWeAre .box .image img {
+    height: 100% !important;
+}
+
+/* End whoWeAre Section */
