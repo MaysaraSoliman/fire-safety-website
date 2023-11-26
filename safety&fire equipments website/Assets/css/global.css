@@ -1,0 +1,129 @@
+:root {
+    --main-color: #044D80;
+    --main-color-2: #1489DD;
+    --border-color: #1188dd26;
+    --transition: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* Start Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.scroll {
+    background-color: white;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+/* Start Topbar Section */
+.topbar {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.topbar-left-content>div {
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-bottom: none;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-left-content>div:not(:nth-of-type(1)) {
+    border-left: none;
+}
+
+.topbar-right-content ul>li {
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-bottom: none;
+    width: 40px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar-right-content ul>li:not(:nth-of-type(1)) {
+    border-left: none;
+}
+
+.topbar a {
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+.scroll .topbar a {
+    color: var(--main-color-2);
+}
+
+/* End Topbar Section */
+
+/* Start Bottombar Section */
+.bottombar .navbar-brand img {
+    width: 150px;
+}
+
+.bottombar .navbar-toggler:focus {
+    color: transparent;
+}
+
+.bottombar .navbar-toggler-icon {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+.scroll .bottombar .navbar-toggler-icon {
+    color: var(--main-color);
+}
+
+.bottombar .navbar-nav:hover .nav-link:not(:hover) {
+    filter: grayscale(100%);
+    opacity: 0.50;
+}
+
+.bottombar a {
+    color: white;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.scroll .bottombar a {
+    color: var(--main-color);
+}
+
+/* End Bottombar Section */
+
+/* End Header */
