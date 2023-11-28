@@ -11,15 +11,16 @@ window.addEventListener("scroll", headerChangeColor);
 // ts-features section
 // ts-features tabs
 
-let navTabs = document.querySelectorAll("#ts-features .featured-tab .nav-tabs li");
+let navTabsLi = document.querySelectorAll("#ts-features .featured-tab .nav-tabs li ");
+let navTabs = document.querySelectorAll("#ts-features .featured-tab .nav-tabs li a");
 
 function handleActiveClass() {
     navTabs.forEach(tab => {
         tab.addEventListener("click", function () {
             navTabs.forEach(tab => {
-                tab.classList.remove("active");
+                tab.closest("li").classList.remove("active");
             })
-            this.classList.add("active");
+            this.closest("li").classList.add("active");
         })
     })
 }
