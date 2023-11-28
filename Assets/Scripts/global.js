@@ -7,3 +7,20 @@ const headerChangeColor = function () {
         : header.classList.remove("scroll");
 };
 window.addEventListener("scroll", headerChangeColor);
+
+// ts-features section
+// ts-features tabs
+
+let navTabs = document.querySelectorAll("#ts-features .featured-tab .nav-tabs li");
+
+function handleActiveClass() {
+    navTabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+            navTabs.forEach(tab => {
+                tab.classList.remove("active");
+            })
+            this.classList.add("active");
+        })
+    })
+}
+handleActiveClass();

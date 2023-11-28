@@ -1,12 +1,21 @@
 :root {
     --main-color: #044D80;
     --main-color-2: #1489DD;
+    --main-color-3: #272D33;
     --primary-color: #39364e;
     --secondary-color: #696969;
     --thirdly-color: white;
     --border-color: #1188dd26;
     --transition: 0.3s;
     --main-padding: 50px;
+}
+
+h3 {
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--secondary-color);
 }
 
 /* Start Hero Section */
@@ -43,6 +52,16 @@
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
+}
+
+#hero .info-content {
+    display: block !important;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 9;
 }
 
 /* End Hero Section */
@@ -146,3 +165,163 @@
 }
 
 /* End whoWeAre Section */
+
+/* Start ts-features Section */
+#ts-features {
+    padding-bottom: var(--main-padding);
+}
+
+#ts-features .intro-feature .image-box {
+    position: relative;
+}
+
+#ts-features .intro-feature .img-box-small {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    z-index: 9;
+    background-color: var(--main-color-2);
+    color: var(--thirdly-color);
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+    font-weight: 700;
+    border: 8px solid #eee;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+#ts-features .intro-feature .img-box figure {
+    width: 200px;
+}
+
+#ts-features .intro-feature .img-box figure:nth-of-type(1) {
+    margin-left: 20px;
+}
+
+#ts-features .intro-feature .img-box figure:not(:nth-of-type(2)) {
+    border: 8px solid #eee;
+}
+
+#ts-features .intro-feature .img-box figure:nth-of-type(2) {
+    border: 8px solid #eee;
+    border-left: 0;
+    border-right: 0;
+}
+
+#ts-features .intro-feature .img-box figure img {
+    height: 100%;
+}
+
+#ts-features .featured-tab .nav-tabs li {
+    background-color: var(--main-color-3);
+    position: relative;
+}
+
+#ts-features .featured-tab .nav-tabs li.active {
+    background-color: var(--main-color-2);
+}
+
+#ts-features .featured-tab .nav-tabs li.active:before {
+    content: "";
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--main-color-2) transparent transparent transparent;
+}
+
+#ts-features .featured-tab .nav-tabs li:nth-of-type(2) {
+    border: 1px solid white;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+#ts-features .featured-tab .nav-tabs .tab-text-title {
+    color: var(--thirdly-color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#ts-features .featured-tab .ts-service-box .ts-service-icon {
+    display: flex;
+}
+
+#ts-features .featured-tab .ts-service-box .ts-service-icon i {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--main-color-2);
+    color: white;
+}
+
+#ts-features .featured-tab .ts-service-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0 15px;
+}
+
+#ts-features .featured-tab .safety {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* End ts-features Section */
+
+/* Start Facts Section */
+
+#facts {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../Images/home/facts-images/parallax1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #000000bf;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+
+}
+
+#facts .fact-image {
+    width: 64px;
+    height: 64px;
+}
+
+#facts .fact-image img {
+    width: 100%;
+    color: red;
+}
+
+#facts .fact-content {
+    display: flex;
+    margin: 20px 0 0;
+    gap: 10px;
+}
+
+#facts .fact-content h2 {
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--thirdly-color);
+}
+
+#facts .fact-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--main-color-2);
+    margin: 0 0 0 10px;
+    align-self: flex-end;
+}
+
+/* End Facts Section */
